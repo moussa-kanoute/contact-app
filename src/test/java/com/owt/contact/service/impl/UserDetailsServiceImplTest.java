@@ -13,8 +13,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -31,7 +29,6 @@ import com.owt.contact.service.PersonService;
  */
 @RunWith(SpringRunner.class)
 @ContextConfiguration
-@DirtiesContext(classMode = ClassMode.BEFORE_EACH_TEST_METHOD)
 public class UserDetailsServiceImplTest {
 
 	@InjectMocks
