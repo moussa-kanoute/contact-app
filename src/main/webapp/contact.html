@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="contact-app">
+<head>
+<title>Contact Management</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/contact.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"> </script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script src="scripts/contact-app.js"></script>
+<script src="scripts/person-ctr.js"></script>
+<script src="scripts/contact-ctr.js"></script>
+</head>
+<body class="ng-view">
+	<h2>Contacts List</h2>
+	<div ng-controller="ContactCtrl">
+		<div class="form-group has-search">
+		    <span class="fa fa-search form-control-feedback"></span>
+			<input type="text" class="form-control" id="inputName" ng-keyup="searchPerson()" placeholder="Search for contact...">
+		</div>
+		<div class="table-responsive">
+			<table id="personTable" class="table table-hover table-striped">
+			<tr class="header">
+				<th class="d-none">Id</th>
+				<th>First and last name</th>
+				<th>Email</th>
+				<th>Mobile phone number</th>
+				<th><button class="btn"><i class="fa fa-address-card" disabled></i></button></th>
+			</tr>
+			<tr ng-repeat="person in persons" ng-class="{'selected':person.id == selectedId}" ng-click="setClickedRow(person)">
+				<td class="d-none">{{person.id}}</td>
+				<td>{{person.firstName}} {{person.lastName}}</td>
+				<td>{{person.email}}</td>
+				<td>{{person.mobileNumber}}</td>
+				<td><a href="#!person/{{person.id}}" class="btn" target="_blank">
+						<i class="fa fa-address-card"></i>
+					</a>
+				</td>
+			</tr>
+			</table>
+		</div>
+		<div class="d-flex justify-content-center">
+			<table>
+				<tr>
+					<td>
+						<a class="btn" id="addAction" ng-href="#!person/0" target="_blank"><i class='fa fa-user-plus'></i> Add contact</a>
+						<a class="btn" id="deleteAction" ng-click="deletePerson(selectedId)"><i class='fa fa-user-times'></i> Delete contact</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

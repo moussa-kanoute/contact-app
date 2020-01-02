@@ -1,0 +1,51 @@
+<h2>Contact Details</h2>
+<div ng-controller="PersonCRUDCtrl">
+	<table>
+		<tr>
+			<td width="100">ID:</td>
+			<td><input type="text" id="idPersInput" ng-model="person.id" /></td>
+		</tr>
+		<tr>
+			<td width="100">First Name:</td>
+			<td><input type="text" id="firstName"
+				ng-model="person.firstName" /></td>
+		</tr>
+		<tr>
+			<td width="100">Last Name:</td>
+			<td><input type="text" id="lastName" ng-model="person.lastName" /></td>
+		</tr>
+		<tr>
+			<td width="100">Full Name:</td>
+			<td><input type="text" id="fullName" ng-model="person.fullName" /></td>
+		</tr>
+		<tr>
+			<td width="100">Address:</td>
+			<td><input type="text" id="address" ng-model="person.address" /></td>
+		</tr>
+		<tr>
+			<td width="100">Email:</td>
+			<td><input type="text" id="email" ng-model="person.email" /></td>
+		</tr>
+		<tr>
+			<td width="100">Mobile Phone</td>
+			<td><input type="text" id="mobileNumber"
+				ng-model="person.mobileNumber" /></td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td>
+				<a class="btn" id="updateAction"
+					ng-click="updatePerson(person.id, person.firstName,person.lastName, person.fullName, person.address, person.email, person.mobileNumber)">
+						<i class="fa fa-user-check"></i> Update Person
+				</a>
+				<a class="btn" id="addAction"
+					ng-click="addPerson(person.firstName,person.lastName, person.fullName, person.address, person.email, person.mobileNumber)">
+						<i class="fa fa-user-plus"></i> Add Person
+				</a>
+		</tr>
+	</table>
+ <br /> <br />
+	<p style="color: green">{{message}}</p>
+	<p style="color: red">{{errorMessage}}</p>
+</div>

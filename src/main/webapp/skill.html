@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="skill-app">
+<head>
+	<meta charset="UTF-8">
+	<title>Skill CRUD</title>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js">
+	</script>
+	<script src="scripts/skill-app.js"></script>
+	<style>
+		a {
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div ng-controller="SkillCRUDCtrl">
+		<table>
+			<tr>
+				<td width="100">ID:</td>
+				<td><input type="text" id="id" ng-model="skill.id" /></td>
+			</tr>
+			<tr>
+				<td width="100">Skill Name:</td>
+				<td><input type="text" id="name" ng-model="skill.name" /></td>
+			</tr>
+		</table>
+		<br />
+		<br /> 
+		<a ng-click="getSkill(skill.id)">Get Skill</a> 
+		<a ng-click="updateSkill(skill.id, skill.name)">Update Skill</a> 
+		<a ng-click="addSkill(skill.name)">Add Skill</a> 
+		<a ng-click="deleteSkill(skill.id)">Delete Skill</a>
+		<br />
+		<br />
+		<p style="color: green">{{message}}</p>
+		<p style="color: red">{{errorMessage}}</p>
+		<br />
+		<br /> 
+		<a ng-click="getAllSkills()">Get all Skills</a><br /> 
+		<br />
+		<br />
+		<div ng-repeat="skill in skills">
+				{{skill.name}}
+		</div>
+	</div>
+</body>
+</html>

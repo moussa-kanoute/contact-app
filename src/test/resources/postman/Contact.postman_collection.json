@@ -1,0 +1,718 @@
+{
+	"info": {
+		"_postman_id": "c86df92e-224c-42d4-8b7c-222f8636a0fd",
+		"name": "Contact",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Skill",
+			"item": [
+				{
+					"name": "create_skill_angular",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"AngularJS\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/skills/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"skills",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_skill_spring",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"Spring\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/skills/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"skills",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_skill_scrum",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"Spring\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/skills/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"skills",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_skills",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNTc3NzU1MzI1LCJyb2xlcyI6IlJPTEVfVVNFUixST0xFX1ZJRVdFUiJ9.DcXfkYuyAd8P5gm3ZyGR6AhAmTMb9oRnphxx9K3m12UoIDKol22RdLKLsK2nqpfZ5itzOd8bTdmZbY8eos8-9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/persons/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persons",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "2861e1f2-52da-4f0e-9861-19bc7ff46de0",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "71aceb1a-08f5-416d-a66d-a8dbce91c8e4",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Person",
+			"item": [
+				{
+					"name": "get_all_persons_for_user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNTc3NzU1MzI1LCJyb2xlcyI6IlJPTEVfVVNFUixST0xFX1ZJRVdFUiJ9.DcXfkYuyAd8P5gm3ZyGR6AhAmTMb9oRnphxx9K3m12UoIDKol22RdLKLsK2nqpfZ5itzOd8bTdmZbY8eos8-9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/persons/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persons",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_persons_for_admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNTc3OTI1NjQ4LCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9WSUVXRVIifQ.LSd_zjNGjlg8WndA0cXLalg5IruKWwsCqf65nk4cPqD2zX6yHhbbtqejmnvzcRWqNvJ01uIjAD4cMNvI_fm-Rg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/persons/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persons",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_person_by_id_for_user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNTc3ODY1MTgyLCJyb2xlcyI6IlJPTEVfVVNFUixST0xFX1ZJRVdFUiJ9.uIX5ugm3zbTYr775xYk-ZURApWIUhoC9-u7tW1Ko9JBEfFHBJwzpPjwHamIQFsfGQW1hZUjL3N3kcRs4z-0KRA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/persons/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persons",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_person_by_id_for_admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNTc3OTIxMTY0LCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9WSUVXRVIifQ.mX8OUY4iZXn_CKfaG2ywBQTA4e_ckPGxOAYG9sKqaRMEvHDVYTAuzMCzPYCLrix2S7srHOwhSesBVq8sdGahOw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/persons/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persons",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login_user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"john.doe@otw.com\",\n\t\"address\" : \"5 avenue Carlos, 92170 Vanves\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"admin.joe@otw.com\",\n\t\"address\" : \"73 rue de l'amiral Cochin, 28000 Chartres\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "get_all_persons_skills",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNTc3OTIxMTY0LCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9WSUVXRVIifQ.mX8OUY4iZXn_CKfaG2ywBQTA4e_ckPGxOAYG9sKqaRMEvHDVYTAuzMCzPYCLrix2S7srHOwhSesBVq8sdGahOw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/skillspersons/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"skillspersons",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_person_skill_by_id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNTc3OTIxMTY0LCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9WSUVXRVIifQ.mX8OUY4iZXn_CKfaG2ywBQTA4e_ckPGxOAYG9sKqaRMEvHDVYTAuzMCzPYCLrix2S7srHOwhSesBVq8sdGahOw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/skillspersons/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"skillspersons",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_person_person_skill_by_id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNTc3OTIxMTY0LCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9WSUVXRVIifQ.mX8OUY4iZXn_CKfaG2ywBQTA4e_ckPGxOAYG9sKqaRMEvHDVYTAuzMCzPYCLrix2S7srHOwhSesBVq8sdGahOw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/skillspersons/1/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"skillspersons",
+						"1",
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_skill_person_skill_by_id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNTc3OTIxMTY0LCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9WSUVXRVIifQ.mX8OUY4iZXn_CKfaG2ywBQTA4e_ckPGxOAYG9sKqaRMEvHDVYTAuzMCzPYCLrix2S7srHOwhSesBVq8sdGahOw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/skillspersons/1/skill",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"skillspersons",
+						"1",
+						"skill"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_perso",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\" : \"Moussa\",\n\t\"lastName\" : \"Kanoute\",\n\t\"address\" : \"73 rue de l'amiral Cochin, 28000 Chartres\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/persons/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persons",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create skill person",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"level\" : \"INTERMEDIATE\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/skillspersons/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"skillspersons",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_skill_person_for_person_1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNTc3OTIxMTY0LCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9WSUVXRVIifQ.mX8OUY4iZXn_CKfaG2ywBQTA4e_ckPGxOAYG9sKqaRMEvHDVYTAuzMCzPYCLrix2S7srHOwhSesBVq8sdGahOw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"level\" : \"INTERMEDIATE\",\n\t\"person\": \"http://localhost:8080/persons/1\",\n\t\"skill\": \"http://localhost:8080/skills/2\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/skillspersons/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"skillspersons",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_skill_person_for_person_2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNTc3OTIxMTY0LCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9WSUVXRVIifQ.mX8OUY4iZXn_CKfaG2ywBQTA4e_ckPGxOAYG9sKqaRMEvHDVYTAuzMCzPYCLrix2S7srHOwhSesBVq8sdGahOw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"level\" : \"INTERMEDIATE\",\n\t\"person\": \"http://localhost:8080/persons/1\",\n\t\"skill\": \"http://localhost:8080/skills/2\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/skillspersons/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"skillspersons",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add person to person skills",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "text/uri-list"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "http://localhost:8080/persons/1",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/skillspersons/1/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"skillspersons",
+						"1",
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add skill to person skills",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "text/uri-list"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "http://localhost:8080/skills/2",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/skillspersons/1/skill",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"skillspersons",
+						"1",
+						"skill"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiZXhwIjoxNTc4MDIxMDk4LCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9WSUVXRVIifQ.An75DiKaIKShnSdn7GcF6GlEqO9WbJN0Uhabs8ld5mfI5sTCOtb-lIY-Sf_A6ly8ob-rmgHCaew1LFqq5EydTQ",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "6cedfd02-79b4-4a2a-88e1-7629320ba3b3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "13f41aab-8147-4698-9782-3b20ae81cd0f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
