@@ -66,6 +66,7 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 		String authorities = auth.getAuthorities().stream().map(GrantedAuthority::getAuthority)
 				.collect(Collectors.joining(","));
 
+		addUserDetailInResponse(res, (User) auth.getPrincipal());
 		addAuthentication(res, ((User) auth.getPrincipal()).getUsername(), authorities);
 
 	}
@@ -82,6 +83,15 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 				.signWith(SignatureAlgorithm.HS512, SecurityConstant.SECRET).compact();
 
 		res.addHeader(SecurityConstant.HEADER_JWT, SecurityConstant.TOKEN_PREFIX + token);
+	}
+
+	private void addUserDetailInResponse(HttpServletResponse resp, User user) {
+
+		try {
+			resp.getWriter().write(new ObjectMapper().writeValueAsString(user));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
